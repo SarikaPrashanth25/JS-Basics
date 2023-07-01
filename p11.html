@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>Type Conversion...!</h1>
+    </center>
+    <hr>
+
+    <script>
+        document.write("3" - 2 +"<br>"); //Output:1
+        document.write("3" + 2 +"<br>"); // Output: 32 (because + behaves as concatenation operator)
+        document.write(3 + "2" +"<br>"); // Output: 32 (because + behaves as concatenation operator)
+        document.write("3" * "2" +"<br>"); //Output: 6
+        document.write(3 * "2" +"<br>"); //Output: 6
+        document.write("3" + 2 +"<br>"); //Output: 6
+        document.write("10" / "2" +"<br>"); //Output: 2
+
+        document.write("<h1>Converting Values to Numbers</h1>");
+        let str = "123";
+        document.write(typeof(str) +"<br>"); //Output: string
+        let num = Number(str); //becomes a number 123
+        document.write(typeof num +"<br>"); //Output: number
+
+        var number1 = Number("10.5" );
+        document.write(typeof (number1)+"<br>"); //Output: number
+
+        let x = "123.333"
+        var a = Number(x); //convert to any type into number
+        document.write(`<h3> Number = ${ a } </h3>`);
+
+        var a1 = parseInt(a);
+        document.write(`<h3> int = ${ a1 } </h3>`);
+
+        var a2 = parseFloat(a);
+        document.write(`<h3> Float = ${ a2 } </h3>`);
+
+        let y = 123.456789;
+        document.write(`<h3> Y variable value is = ${ y } </h3>`);
+        document.write(`<h3> Y variable value is = ${ y.toFixed() } </h3>`);
+        document.write(`<h3> Y variable value is = ${ y.toFixed(1) } </h3>`);
+        document.write(`<h3> Y variable value is = ${ y.toFixed(2) } </h3>`);
+        document.write(`<h3> Y variable value is = ${ y.toFixed(3) } </h3>`);
+        document.write(`<h3> Y variable value is = ${ y.toFixed(4) } </h3>`);
+
+        Number(true) //returns 1
+        Number(false) //returns 0
+        Number(null) //returns 0
+        Number(" 123 ") //returns 123
+        Number(" ") //returns 0
+        Number("") //returns 0
+        Number("123e-1") //returns 12.3
+        Number(0XFF) //returns 255 (hexadecimal representation)
+        Number("Hello World") //return NaN
+        Number(undefined) //returns NaN
+        Number(null) //returns NaN
+
+    </script>
+
+    <script>
+         document.write("<h1>Converting Values to String</h1>");
+        let bool = true;
+        document.write(typeof(bool) +"<br>"); //Output: boolean
+
+        var str1 = String(bool); //becomes a string "true"
+        document.write(typeof str+"<br>"); //output: string
+
+        var str1 = String(10.5)  //returns "10.5"
+        document.write("<p><b>str1</b></p>" + str1);
+        document.write("<p><b>str1</b></p>" + typeof(str1));
+        String(123) //returns "123"
+        String(100  + 23) //returns "123"
+        String(true) //returns "true"
+        String(false) //returns "false"
+        String(123e-1) //returns "12.3"
+        String(0xFF) //returns "255"
+        String(undefined) //returns "undefined"
+        String(null) //returns "null"
+    </script>
+    
+    <script>
+        document.write("<h1>Converting Values to String</h1>");
+        Boolean(0) //returns false
+        Boolean(null) //returns false
+        Boolean(false) //returns false
+        Boolean(undefined) //returns false
+        Boolean(NaN) //returns false
+        Boolean("") //returns false
+        Boolean(1) //returns true
+        Boolean(true) //returns false
+    </script>
+    <script>
+        document.write("Type Conversions Using Operators</h1>");
+        let x1 = "10";  //x is a string
+        let y1 = +x1;
+        alert(typeof(y1)); //Output: number
+        alert(y1); //Output: 10
+
+        let x2 = 10; //x is a number
+        let y2 = x2 +"";
+        alert(typeof(y2)); //Output: string
+        alert(y2); //Output:10
+
+        let x3 = "15"; // x is string
+        let y3 = x3-0;
+        alert(typeof(y3)); //Output: number
+        alert(y3); //Output: 1
+    </script>
+</body>
+</html>

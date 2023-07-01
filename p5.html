@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+    <style>
+        table, th, td{
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Condition Statements...!</h1>
+    </center>
+
+    <hr>
+
+    <ol>
+        <li>Simple If</li>
+        <li>If Else</li>
+        <li>If Else Ladder</li>
+        <li>Switch Case</li>
+    </ol>
+    <hr>
+
+    <script>
+        function testCondition(){
+            let firstNumber = 40, secondNumber = "44";
+            // if(firstNumber <= secondNumber){
+            //   alert("Condition is true...!");
+            // } else{
+            //  alert("Condition is not true...!");
+            // }
+
+            let message = firstNumber < secondNumber ? "Condition is true...!" : "Condition is not true...!";
+            document.write(message);
+        }
+        testCondition();
+    </script>
+
+    <br><hr><br>
+
+    <h2>Largest of two numbers using JS</h2>
+    <table>
+        <tr>
+            <th><label for="">Enter First Number :</label></th>
+            <td><input type="number" name="firstNumber" id="firstNumber" placeholder="First Number"></td>
+        </tr>
+        <tr>
+            <th><label for="">Enter Second Number :</label></th>
+            <td><input type="number" name="secondNumber" id="secondNumber" placeholder="Second Number"></td>
+        </tr>
+        <tr>
+            <th><label for="">Enter Third Number :</label></th>
+            <td><input type="number" name="thirdNumber" id="thirdNumber" placeholder="Third Number"></td>
+        </tr>
+        <tr>
+            <th><label for="">Result :</label></th>
+            <td><p id="result"></p></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="btn-sub">Submit</button></td>
+            <td><button type="button" id="btn-cnl">Cancel</button></td>
+        </tr>
+    </table>
+
+    <script>
+        function checkCondition(){
+            let firstNumber = parseInt(document.getElementById("firstNumber").value);
+            let secondNumber = +document.getElementById("secondNumber").value;
+            let thirdNumber = +document.getElementById("thirdNumber").value;
+            let result = document.getElementById("result");
+
+            console.log(typeof firstNumber)
+            console.log(typeof secondNumber)
+            console.log(typeof thirdNumber)
+
+
+            if (firstNumber === secondNumber && thirdNumber === firstNumber) {
+                result.innerHTML = "Numbers are equal";
+            } else if(firstNumber > secondNumber && firstNumber > thirdNumber) {
+                result.innerHTML = "First Number is Big";
+            } else if(secondNumber > firstNumber && secondNumber > thirdNumber){
+                result.innerHTML = "Second Number is Big";
+            } else if(thirdNumber > firstNumber && thirdNumber > secondNumber) {
+                result.innerHTML = "Third Number is Big";
+            } else{
+                result.innerHTML = "Enter valid numbers";
+            }
+        }
+        document.getElementById("btn-sub").onclick = checkCondition;
+    </script>
+</body>
+</html>
